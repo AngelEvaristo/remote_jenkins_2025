@@ -3,7 +3,7 @@
 // def remote = load 'pipelines/buildAndTest.groovy'
 // remote.call('My Project', true)
 
-def call(String projectName = 'Sesion1 .NET Demo', boolean useProjectScripts = true) {
+def call(String projectName = 'Sesion1 .NET Demo', boolean useProjectScripts = True) {
   node {
     stage('Checkout App') {
       checkout scm
@@ -24,4 +24,5 @@ def call(String projectName = 'Sesion1 .NET Demo', boolean useProjectScripts = t
 }
 
 return this
+
 
