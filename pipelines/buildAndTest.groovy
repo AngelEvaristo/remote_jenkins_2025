@@ -12,8 +12,8 @@ def call(String projectName = 'Sesion1 .NET Demo', boolean useProjectScripts = T
     def scriptsDir = useProjectScripts ? 'scripts' : 'pipeline-remote/scripts'
 
     stage('Build') {
-      def ws = pwd()
-      dir
+      def ws = pwd()  
+      bat "dir"
       powershell "${ws}/pipeline-remote/scripts/buildremote.ps1 -ProjectName '${projectName}'"
     }
     stage('Test') {
@@ -26,6 +26,7 @@ def call(String projectName = 'Sesion1 .NET Demo', boolean useProjectScripts = T
 }
 
 return this
+
 
 
 
